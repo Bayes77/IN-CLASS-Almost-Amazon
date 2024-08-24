@@ -4,7 +4,7 @@ const endpoint = client.databaseURL;
 
 // FIXME:  GET ALL AUTHORS
 const getAuthors = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Authors.json`, {
+  fetch(`${endpoint}/author.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -30,6 +30,18 @@ const updateAuthor = () => {};
 // TODO: GET A SINGLE AUTHOR'S BOOKS
 const getAuthorBooks = () => {};
 
+const getFavAuthors = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/author.json?orderBy="favorite"&eqaulTo=true`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application.json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.value(data)))
+    .catch(reject);
+});
+
 export {
   getAuthors,
   createAuthor,
@@ -37,4 +49,5 @@ export {
   deleteSingleAuthor,
   updateAuthor,
   getAuthorBooks,
+  getFavAuthors
 };
