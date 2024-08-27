@@ -18,11 +18,8 @@ const addAuthorForm = () => {
         <input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email" required>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="favorite"
+        <input type="checkbox" class="form-check-input" id="favorite" name="favorite">Favorite Author
       </div>
-
-
-
       <button type="submit" class="btn btn-primary mt-3">Submit Author</button>
     </form>`;
 
