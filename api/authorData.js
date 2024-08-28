@@ -57,7 +57,7 @@ const deleteSingleAuthor = (firebaseKey) => new Promise((resolve, reject) => {
 
 // FIXME: UPDATE AUTHOR
 const updateAuthor = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/aurthor/${payload.firebaseKey}.json`, {
+  fetch(`${endpoint}/author/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
