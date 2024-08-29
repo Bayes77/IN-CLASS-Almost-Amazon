@@ -73,7 +73,7 @@ const updateAuthor = (payload) => new Promise((resolve, reject) => {
 const getAuthorBooks = () => {};
 
 const getFavAuthors = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/author.json?orderBy="favorite"&eqaulTo=true`, {
+  fetch(`${endpoint}/author.json?orderBy="favorite"&equalTo=true`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application.json',
