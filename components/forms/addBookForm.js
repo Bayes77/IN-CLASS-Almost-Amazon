@@ -9,7 +9,7 @@ const addBookForm = (obj = {}) => {
     <form id="${obj.firebaseKey ? `update-book--${obj.firebaseKey}` : 'submit-book'}" class="mb-4">
       <div class="form-group">
         <label for="title">Book Title</label>
-        <input type="text" class="form-control" id="title" aria-describedby="bookTitle" placeholder="Enter Book Title" value="${obj.title || ''}" required>
+        <input type="text" class="form-control" id="title" aria-describedby="bookTitle" placeholder="Enter Book Title"C" required>
       </div>
       <div class="form-group">
         <label for="description">Description</label>
@@ -26,7 +26,7 @@ const addBookForm = (obj = {}) => {
       <div class="form-group" id="select-author">
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="sale" ${obj.sale ? 'checked' : ''}>
+        <input type="checkbox" class="form-check-input" id="sale" value=${obj.sale ? 'checked' : ''}>
         <label class="form-check-label" for="sale">On Sale?</label>
       </div>
       <button type="submit" class="btn btn-primary">Submit Book

@@ -40,7 +40,7 @@ const getSingleBook = (firebaseKey) => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((dats) => resolve(dats))
+    .then((data) => resolve(data))
     .catch(reject);
 });
 
